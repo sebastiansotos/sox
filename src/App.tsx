@@ -48,7 +48,7 @@ function App() {
         alignItems: 'center', 
         justifyContent: 'center' 
       }}>
-        <h2>👕 Catálogo de Productos Próximamente...</h2>
+        <h2 style={{ marginBottom: '40px', color:'#000000' }}>Catálogo de Productos Próximamente...</h2>
       </div>
     </div>
   )
