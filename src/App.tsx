@@ -5,22 +5,34 @@ function App() {
   return (
     <div style={{ 
       display: 'flex', 
-      flexDirection: 'column', // Alinea los elementos uno arriba del otro
-      alignItems: 'center',    // Centra horizontalmente
-      justifyContent: 'center', // Centra verticalmente en toda la pantalla
-      height: '100vh',         // Ocupa el 100% de la altura del navegador
-      textAlign: 'center'
+      flexDirection: 'column', // Texto arriba, imagen abajo
+      alignItems: 'center',    // Centrado horizontal exacto
+      justifyContent: 'center', // Centrado vertical exacto
+      minHeight: '100vh',      // Toda la altura de la pantalla
+      backgroundColor: '#1a1a1a', // Fondo oscuro para que resalte el blanco
+      color: 'white',          // Todo el texto blanco
+      margin: 0,
+      padding: '20px'
     }}>
-      {/* El texto se queda arriba */}
-      <h1 className='Color="Black"'>𝘓𝘢 𝘔𝘦𝘫𝘰𝘳 𝘳𝘰𝘱𝘢 𝘥𝘦 𝘝𝘦𝘯𝘦𝘻𝘶𝘦𝘭𝘢 🇻🇪</h1>
-      <p  className='Color="Black"'>𝘓𝘢 𝘔𝘦𝘫𝘰𝘳 𝘳𝘰𝘱𝘢 𝘥𝘦 𝘝𝘦𝘯𝘦𝘻𝘶𝘦𝘭𝘢 🇻🇪, 𝘙𝘦𝘱𝘳𝘦𝘴𝘦𝘯𝘵𝘢𝘯𝘥𝘰 𝘮𝘪 𝘗𝘢í𝘴</p>
       
-      {/* Tu logo en el medio */}
+      {/* Texto arriba */}
+      <h1 style={{ marginBottom: '30px' }}>
+        𝘓𝘢 𝘔𝘦𝘫𝘰𝘳 𝘳𝘰𝘱𝘢 𝘥𝘦 𝘝𝘦𝘯𝘦𝘻𝘶𝘦𝘭𝘢 🇻🇪 
+      </h1>
+      
+      {/* Logo en el centro */}
       <img 
         src="/Logo.svg" 
         alt="Logo Sorex" 
-        style={{ width: '200px', marginTop: '20px' }} 
+        style={{ 
+          maxWidth: '300px', // Ajusta el tamaño a tu gusto
+          height: 'auto',
+          display: 'block'
+        }} 
       />
+      
     </div>
   )
 }
+
+export default App;
