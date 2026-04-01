@@ -9,7 +9,6 @@ const {} = useState()
 
   return (
     <div className="p-4">
-      // En tu componente .tsx
 <h1 style={{ fontStyle: 'italic', fontWeight: 'normal', textAlign: 'center' }}>
   𝘏𝘦𝘭𝘭𝘰, 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘚𝘰𝘳𝘦𝘹
 </h1>
