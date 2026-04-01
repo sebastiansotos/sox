@@ -12,7 +12,7 @@
 }
 
 .logo-loading {
-  width: 500px;
+  width: 550px;
   /* El truco del barrido: empieza cortado al 100% desde la derecha */
   clip-path: inset(0 100% 0 0);
   animation: reveal-logo 2s ease-in-out forwards;
