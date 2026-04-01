@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
-/* --- PANTALLA DE CARGA (INTRO) --- */
+/* FUERZA QUE NO HAYA BORDES EN LA PANTALLA */
+:root, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Evita que la página se mueva hacia los lados */
+  background-color: #000; /* Fondo base negro */
+}
+
+/* PANTALLA DE CARGA BLANCA */
 .loader-container {
   position: fixed;
-  inset: 0;
-  background-color: #ffff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,20 +24,24 @@
 }
 
 .logo-loading {
-  width: 550px;
-  /* El truco del barrido: empieza cortado al 100% desde la derecha */
+  width: 250px;
   clip-path: inset(0 100% 0 0);
-  animation: reveal-logo 2s ease-in-out forwards;
+  /* Animación rápida de 1 segundo */
+  animation: reveal-logo 1s ease-in-out forwards; 
 }
 
 @keyframes reveal-logo {
-  to {
-    clip-path: inset(0 0 0 0); /* Se revela por completo */
-  }
+  to { clip-path: inset(0 0 0 0); }
 }
 
-/* --- ESTILOS DE LA WEB --- */
+/* FONDO NEGRO ANIMADO A PANTALLA COMPLETA */
 .bg-hero-animado {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(-45deg, #000, #1a1a1a, #0a0a0a, #222);
   background-size: 400% 400%;
   animation: gradient-bg 15s ease infinite;
@@ -51,8 +67,11 @@
 }
 
 .boton-logo {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
 }
 
 .boton-logo:hover {
@@ -61,10 +80,10 @@
 }
 
 .seccion-productos {
+  width: 100vw;
   min-height: 100vh;
   background-color: #f4f4f4;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
