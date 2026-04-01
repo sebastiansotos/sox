@@ -29,7 +29,7 @@ function App() {
         
         <div style={{ textAlign: 'center' }}>
           <h1 className="titulo-glitch">𝘏𝘦𝘭𝘭𝘰, 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘚𝘰𝘳𝘦𝘹</h1>
-          <p style={{ color: 'white', marginTop: '15px', fontSize: '1.2rem', opacity: 0.8 }}>
+          <p style={{ color: 'white', marginTop: '15px', fontSize: '1.4rem', opacity: 0.8 }}>
             𝘓𝘢 𝘔𝘦𝘫𝘰𝘳 𝘳𝘰𝘱𝘢 𝘥𝘦 𝘝𝘦𝘯𝘦𝘻𝘶𝘦𝘭𝘢 🇻🇪
           </p>
         </div>
