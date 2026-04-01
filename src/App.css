@@ -1,27 +1,26 @@
 @import "tailwindcss";
 
-/* 1. RESET RADICAL: Mata el borde blanco en móviles y PC */
+/* 1. RESET Y BLOQUEO DE SCROLL */
 html, body {
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background-color: #000; /* Fondo negro sólido base */
-  overflow-x: hidden; /* Elimina cualquier franja blanca lateral */
-  -webkit-tap-highlight-color: transparent;
+  background-color: #000;
+  /* BLOQUEO TOTAL INICIAL */
+  overflow: hidden !important; 
+  touch-action: none; 
 }
 
 #root {
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-/* 2. PANTALLA DE CARGA (Fondo Negro para evitar flash blanco) */
+/* 2. PANTALLA DE CARGA */
 .loader-container {
   position: fixed;
   inset: 0;
-  background-color: #000; 
+  background-color: #000; /* Negro para evitar flash blanco */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,15 +29,15 @@ html, body {
 
 .logo-loading {
   width: 300px;
-  filter: invert(0.9);
+  filter: invert(1);
   clip-path: inset(0 100% 0 0);
   animation: reveal-logo 1s ease-in-out forwards;
 }
 
-/* 3. HERO (Ajustado para ser 100% Negro) */
+/* 3. HERO (AJUSTE SIN BORDES) */
 .bg-hero-animado {
-  width: 100% !important; 
-  min-height: 100dvh; /* Altura dinámica para móviles */
+  width: 100% !important;
+  height: 100dvh; /* Altura perfecta en móviles */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,38 +48,46 @@ html, body {
   animation: gradient-bg 15s ease infinite;
 }
 
+.descripcion-hero {
+  color: #a1a1a1; /* Gris suave */
+  margin-top: 25px;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
 .titulo-glitch {
   font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 900;
   color: white;
   animation: glitch-anim 0.4s infinite;
   text-align: center;
-  line-height: 1.1;
 }
 
-/* 4. LOGO GRIS CON EFECTO GLOW (BRILLO) */
+/* 4. LOGO GRIS CLARO CON BRILLO (GLOW) */
 .logo-main {
   width: 280px;
   height: auto;
   display: block;
-  /* Gris claro notorio + Brillo suave */
-  filter: invert(0.8) brightness(1.2) drop-shadow(0 0 15px rgba(255,255,255,0.1));
-  transition: all 0.5s ease;
+  /* Efecto Gris Claro Notorio + Brillo */
+  filter: invert(0.8) brightness(1.2) drop-shadow(0 0 12px rgba(255,255,255,0.15));
+  transition: all 0.4s ease;
 }
 
 .boton-logo {
   background: none !important;
   border: none !important;
   cursor: pointer;
-  outline: none;
 }
 
 .boton-logo:hover .logo-main {
   transform: scale(1.1);
-  filter: invert(1) brightness(1.5) drop-shadow(0 0 25px rgba(255,255,255,0.3));
+  filter: invert(1) brightness(1.5) drop-shadow(0 0 20px rgba(255,255,255,0.4));
 }
 
-/* 5. SECCIÓN PRODUCTOS (PEGADA AL HERO) */
+/* 5. SECCIÓN PRODUCTOS */
 .seccion-productos {
   width: 100%;
   min-height: 100vh;
@@ -92,13 +99,11 @@ html, body {
 
 /* ANIMACIONES */
 @keyframes reveal-logo { to { clip-path: inset(0 0 0 0); } }
-
 @keyframes gradient-bg {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 @keyframes glitch-anim {
   0% { text-shadow: 1px 0 0 #ff00c1, -1px 0 0 #00fff9; }
   50% { text-shadow: -1px 1px 0 #ff00c1, 1px -1px 0 #00fff9; }
