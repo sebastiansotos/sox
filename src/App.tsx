@@ -10,7 +10,6 @@ function App() {
   }, []);
 
   const irAProductos = () => {
-    // DESBLOQUEA EL SCROLL SOLO AL DAR CLICK
     document.documentElement.style.overflow = 'auto';
     document.body.style.overflow = 'auto';
 
@@ -28,11 +27,10 @@ function App() {
 
   return (
     <main style={{ width: '100%' }}>
-      {/* SECCIÓN NEGRA HERO */}
       <section className="bg-hero-animado">
         
         <div style={{ textAlign: 'center', padding: '0 20px' }}>
-          <h1 className="titulo-glitch">𝘏𝘦𝘭𝘭𝘰, 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘚𝘰𝘳𝘦𝘹</h1>
+          <h1 className="titulo-glitch">𝘏𝘦𝘭𝘭𝘰, 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘚𝘰𝘹 𝘌𝘭𝘦𝘨𝘢𝘯𝘤𝘦</h1>
           <p className="descripcion-hero">
              𝘋𝘦𝘴𝘪𝘨𝘯𝘦𝘥 𝘧𝘰𝘳 𝘵𝘩𝘰𝘴𝘦 𝘸𝘩𝘰 𝘥𝘰𝘯'𝘵 𝘴𝘦𝘦𝘬 𝘵𝘰 𝘧𝘪𝘵 𝘪𝘯, 𝘪𝘧 𝘯𝘰𝘵 𝘵𝘰 𝘥𝘰𝘮𝘪𝘯𝘢𝘵𝘦. 𝘐𝘧 𝘺𝘰𝘶'𝘳𝘦 𝘯𝘰𝘵 𝘸𝘪𝘭𝘭𝘪𝘯𝘨 𝘵𝘰 𝘳𝘪𝘴𝘬 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨, 𝘥𝘰𝘯'𝘵 𝘦𝘷𝘦𝘯 𝘵𝘳𝘺.
              <br />
@@ -43,15 +41,13 @@ function App() {
         <button className="boton-logo" onClick={irAProductos}>
           <img 
             src="/Logo.svg" 
-            alt="Logo Sorex" 
+            alt="Logo Sox Elegance" 
             className="logo-main"
-            style={{color: '#fff'}} 
           />
         </button>
 
       </section>
 
-      {/* SECCIÓN PRODUCTOS BLANCA */}
       <section id="productos" className="seccion-productos">
         <h2 style={{ color: '#000', fontSize: '2.5rem' }}>Catálogo Próximamente...</h2>
       </section>

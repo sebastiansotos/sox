@@ -7,7 +7,6 @@ html, body {
   width: 100% !important;
   height: 100% !important;
   background-color: #000;
-  /* BLOQUEO TOTAL INICIAL */
   overflow: hidden !important; 
   touch-action: none; 
 }
@@ -20,7 +19,7 @@ html, body {
 .loader-container {
   position: fixed;
   inset: 0;
-  background-color: #000; /* Negro para evitar flash blanco */
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,15 +28,16 @@ html, body {
 
 .logo-loading {
   width: 300px;
-  filter: invert(1);
+  /* FUERZA EL COLOR BLANCO EN EL SVG */
+  filter: brightness(0) invert(1);
   clip-path: inset(0 100% 0 0);
   animation: reveal-logo 1s ease-in-out forwards;
 }
 
-/* 3. HERO (AJUSTE SIN BORDES) */
+/* 3. HERO */
 .bg-hero-animado {
   width: 100% !important;
-  height: 100dvh; /* Altura perfecta en móviles */
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@ html, body {
 }
 
 .descripcion-hero {
-  color: #a1a1a1; /* Gris suave */
+  color: #a1a1a1;
   margin-top: 25px;
   font-size: 1.2rem;
   max-width: 650px;
@@ -66,13 +66,13 @@ html, body {
   text-align: center;
 }
 
-/* 4. LOGO GRIS CLARO CON BRILLO (GLOW) */
+/* 4. LOGO BLANCO CON BRILLO */
 .logo-main {
   width: 280px;
   height: auto;
   display: block;
-  /* Efecto Gris Claro Notorio + Brillo */
-  filter: invert(0.8) brightness(1.2) drop-shadow(0 0 12px rgba(255,255,255,0.15));
+  /* FILTRO PARA BLANCO PURO Y GLOW */
+  filter: brightness(0) invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.2));
   transition: all 0.4s ease;
 }
 
@@ -80,11 +80,12 @@ html, body {
   background: none !important;
   border: none !important;
   cursor: pointer;
+  outline: none;
 }
 
 .boton-logo:hover .logo-main {
   transform: scale(1.1);
-  filter: invert(1) brightness(1.5) drop-shadow(0 0 20px rgba(255,255,255,0.4));
+  filter: brightness(0) invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.5));
 }
 
 /* 5. SECCIÓN PRODUCTOS */
